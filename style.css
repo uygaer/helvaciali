@@ -216,6 +216,8 @@ body {
   background: #fff;
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+  overflow: hidden;
+
 }
 
 /* içecek kartı */
@@ -306,14 +308,12 @@ body {
 .inner .variant-row {
   display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  min-width: 130px;
+  gap: 8px;
   padding: 6px 10px;
-  margin: 4px 6px 0 0;
   background: #f7f7f7;
   border-radius: 999px;
   font-size: 13px;
-  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+  white-space: nowrap;
 }
 
 /* fiyatt */
@@ -321,6 +321,14 @@ body {
   font-weight: 900;
   color: #b32025;
   margin-left: 8px;
+}
+
+@media (max-width: 420px) {
+  .inner .variant-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
 }
 
 /* footer */
@@ -340,14 +348,7 @@ body {
   align-items: center;
 }
 
-/* Mobilde alt alta gelsin */
-@media (max-width: 600px) {
-  .footer-inner {
-    flex-direction: column;
-    gap: 6px;
-    text-align: center;
-  }
-}
+
 
 /* ===== SOSYAL MEDYA İKONLARI ===== */
 
@@ -364,4 +365,42 @@ body {
   padding: 0px;
   background: whitesmoke;
 
+}
+
+@media (max-width: 380px) {
+  .inner .variant-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .inner .variant-row .price {
+    align-self: flex-end;
+  }
+}
+
+@media (max-width: 360px) {
+
+  .inner .variant-group {
+    display: block;
+  }
+
+  .inner .variant-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    border-radius: 14px;
+  }
+
+  /* Dondurmalı / Dondurmasız etiketi */
+  .inner .variant-title {
+    display: block;
+    margin-bottom: 6px;
+  }
+}
+
+@media (max-width: 360px) {
+  .inner .variant-group + .variant-group {
+    margin-top: 14px;
+  }
 }
