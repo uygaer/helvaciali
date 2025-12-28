@@ -1,6 +1,7 @@
 /* ===== Bulancak Helvacı Ali QR Menu ===== */
 /* ===== UYGAR GÜNER ===== */
 
+
 * {
   margin: 0;
   padding: 0;
@@ -469,5 +470,8 @@ body {
   margin-bottom: 0;
 }
 
-
-
+@media (max-width: 479px) {
+  .inner .variant-group + .variant-group .variant-title {
+    margin-top: 4px; /* 1–2px istersen 3 yap */
+  }
+}
