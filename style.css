@@ -365,11 +365,3 @@ body {
   background: whitesmoke;
 
 }
-
-/* Mobilde helva sayfasını biraz küçült */
-@media (max-width: 768px) {
-  .helva-page {
-    transform: scale(0.80);
-    transform-origin: top center;
-  }
-}
