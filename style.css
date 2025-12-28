@@ -1,0 +1,367 @@
+/* ===== Bulancak Helvacı Ali QR Menu ===== */
+/* ===== UYGAR GÜNER ===== */
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background: #f6f6f6;
+  color: #222;
+}
+
+/* header (ORTAK) */
+
+.header {
+  background: linear-gradient(180deg, #b32025 0%, #9e1f23 100%);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 16px 12px 18px;
+  text-align: center;
+}
+
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  margin-bottom: 10px;
+}
+
+.header-logo {
+  width: 240px;
+  height: auto;
+  filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
+}
+
+.header-divider {
+  width: 2px;
+  height: 56px;
+  background: rgba(255,255,255,0.85);
+  border-radius: 2px;
+}
+
+.header-title {
+  font-family: 'Lobster', cursive;
+  font-size: 32px;
+  color: #fff;
+  white-space: nowrap;
+}
+
+/* İletişim */
+.contact {
+  display: inline-flex;
+  gap: 12px;
+  align-items: center;
+  font-size: 14px;
+  background: rgba(255,255,255,0.14);
+  padding: 8px 14px;
+  border-radius: 999px;
+}
+
+.contact a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.phone {
+  opacity: 1;
+  padding-left: 8px;
+  border-left: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Mobil header */
+@media (max-width: 480px) {
+  .header-logo { width: 150px; }
+  .header-divider { height: 36px; }
+  .header-title { font-size: 22px; }
+}
+
+/* container kısmı */
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 40px;
+}
+
+/* home / showcase */
+
+.home .showcase-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.home .showcase-card {
+  position: relative;
+  height: 240px;
+  border-radius: 22px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 20px 44px rgba(0,0,0,0.18);
+}
+
+.home .showcase-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.home .showcase-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.8),
+    rgba(0,0,0,0.15)
+  );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 20px;
+  color: #fff;
+}
+
+.home .showcase-overlay h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 30px;
+  transform: translateY(26px);
+  transition: transform 0.4s ease;
+}
+
+.home .showcase-overlay p {
+  font-size: 14px;
+  opacity: 0;
+  transform: translateY(12px);
+  transition: all 0.4s ease;
+}
+
+/* Hover (masaüstünde) */
+.home .showcase-card:hover img { transform: scale(1.08); }
+.home .showcase-card:hover h3 { transform: translateY(0); }
+.home .showcase-card:hover p {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Mobilde otomatik animasyon */
+@media (hover: none) and (pointer: coarse) {
+  .home .showcase-card img { transform: scale(1.08); }
+  .home .showcase-overlay h3 { transform: translateY(0); }
+  .home .showcase-overlay p {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Masaüstü: 3lü grid */
+@media (min-width: 900px) {
+  .home .showcase-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+/* inner pagess */
+
+.inner .header {
+  padding: 22px 16px 18px;
+  text-align: center;
+}
+
+.inner .logo {
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: .4px;
+  color: #fff;
+}
+
+.inner .container {
+  max-width: 520px;
+  padding: 18px 14px 30px;
+}
+
+/* Geri */
+.inner .back {
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  font-size: 14px;
+  opacity: .9;
+}
+
+/* menü ve ürünler gelllllllsin*/
+
+.inner .product-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+.inner .product-card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.10);
+}
+
+/* içecek kartı */
+.inner .product-card.drink-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 16px;
+  border-radius: 18px;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.08);
+}
+
+/* başlık satırı */
+.inner .product-card.section-title {
+  background: transparent;
+  box-shadow: none;
+  padding: 6px 6px 2px;
+}
+
+.inner .product-card.section-title h3 {
+  font-size: 15px;
+  font-weight: 900;
+  color: #8f1a1e;
+  letter-spacing: .5px;
+}
+
+/* fiyat */
+.inner .price {
+  font-size: 17px;
+  font-weight: 900;
+  color: #b32025;
+}
+
+/* ================= VARYASYONLU ÜRÜNLER ================= */
+
+.inner .product-card.with-variants {
+  padding: 14px;
+}
+
+.inner .product-main {
+  display: grid;
+  grid-template-columns: 64px 1fr;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.inner .product-main img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.inner .product-info h3 {
+  font-size: 17px;
+  font-weight: 800;
+  margin-bottom: 4px;
+}
+
+.inner .product-info p {
+  font-size: 13px;
+  color: #666;
+}
+
+
+/* varyasyonlar chip / pill */
+
+.inner .variants {
+  border-top: 1px solid #eee;
+  padding-top: 8px;
+}
+
+/* dondurmalı dondurmasız etiketi */
+.inner .variant-title {
+  display: inline-block;
+  background: rgba(179,32,37,0.08);
+  color: #b32025;
+  font-size: 12px;
+  font-weight: 800;
+  padding: 6px 12px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+/* küçük büyük satırlarını pill yap */
+.inner .variant-row {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 130px;
+  padding: 6px 10px;
+  margin: 4px 6px 0 0;
+  background: #f7f7f7;
+  border-radius: 999px;
+  font-size: 13px;
+  box-shadow: inset 0 0 0 1px rgba(0,0,0,0.04);
+}
+
+/* fiyatt */
+.inner .variant-row .price {
+  font-weight: 900;
+  color: #b32025;
+  margin-left: 8px;
+}
+
+/* footer */
+
+.footer {
+  background: #f3dcb4; /* sitedeki açık bej tonuna uyumlu */
+  padding: 12px 16px;
+  font-size: 13px;
+  color: #444;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Mobilde alt alta gelsin */
+@media (max-width: 600px) {
+  .footer-inner {
+    flex-direction: column;
+    gap: 6px;
+    text-align: center;
+  }
+}
+
+/* ===== SOSYAL MEDYA İKONLARI ===== */
+
+.contact .social {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.contact .social img {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  padding: 0px;
+  background: whitesmoke;
+
+}
