@@ -168,12 +168,7 @@ body {
 }
 
 /* Masaüstü: 3lü grid */
-@media (min-width: 900px) {
-  .home .showcase-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 28px;
-  }
-}
+
 
 /* inner pagess */
 
@@ -404,3 +399,76 @@ body {
     margin-top: 14px;
   }
 }
+
+@media (min-width: 361px) {
+
+  /* Kart içi boşluğu biraz daralt */
+  .inner .product-card.with-variants {
+    padding-right: 16px;
+  }
+
+  /* Varyasyon alanı tam genişliği kullansın */
+  .inner .variants {
+    width: 100%;
+  }
+
+  /* Dondurmalı satırı SOLA yasla */
+  .inner .variant-group {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* ORTALAMA YOK */
+    gap: 12px;
+    width: 100%;
+  }
+
+  /* Etiket sabit ama sola yakın */
+  .inner .variant-title {
+    min-width: 110px;
+    text-align: left;
+  }
+
+  /* Küçük / Büyük pill’leri eşit */
+  .inner .variant-row {
+    min-width: 140px;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 475px) {
+
+  .inner .variant-group {
+    display: block;
+  }
+
+  .inner .variant-row {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .inner .variant-title {
+    display: inline-block;
+    margin-bottom: 6px;
+  }
+}
+
+@media (min-width: 480px) {
+  .inner .variant-row {
+    margin-bottom: 4px;
+  }
+
+  .inner .variant-row:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.inner .variant-row {
+  margin-bottom: 4px;
+}
+
+.inner .variant-row:last-child {
+  margin-bottom: 0;
+}
+
+
+
