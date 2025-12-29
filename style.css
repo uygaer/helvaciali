@@ -1,6 +1,5 @@
 /* ===== Bulancak Helvacı Ali QR Menu ===== */
-/* ===== UYGAR GÜNER ===== */
-
+/* ===== Hazırlayan: UYGAR GÜNER ===== */
 
 * {
   margin: 0;
@@ -15,7 +14,6 @@ body {
 }
 
 /* header (ORTAK) */
-
 .header {
   background: linear-gradient(180deg, #b32025 0%, #9e1f23 100%);
   position: sticky;
@@ -28,43 +26,46 @@ body {
   margin: 0 auto;
   padding: 16px 12px 18px;
   text-align: center;
+  overflow: hidden;
 }
 
 .header-brand {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 18px;
-  margin-bottom: 10px;
+  flex-wrap: nowrap;
+  gap: clamp(12px, 3vw, 22px);
 }
 
 .header-logo {
-  width: 240px;
+  width: clamp(100px, 28vw, 240px);
   height: auto;
   filter: drop-shadow(0 6px 16px rgba(0,0,0,0.35));
 }
 
 .header-divider {
+  margin: 0 clamp(0px, 1.8vw, 10px);
   width: 2px;
-  height: 56px;
+  height: 42px;
   background: rgba(255,255,255,0.85);
-  border-radius: 2px;
+  border-radius: 8px;
 }
 
 .header-title {
   font-family: 'Lobster', cursive;
-  font-size: 32px;
-  color: #fff;
+  font-size: clamp(18px, 5vw, 32px);
   white-space: nowrap;
+  color: #fff;
 }
 
-/* İletişim */
+/* iletişim kutucuğu */
 .contact {
+  margin-top: 10px;
   display: inline-flex;
   gap: 12px;
   align-items: center;
   font-size: 14px;
-  background: rgba(255,255,255,0.14);
+  background: rgba(255, 255, 255, 0.126);
   padding: 8px 14px;
   border-radius: 999px;
 }
@@ -81,7 +82,7 @@ body {
   border-left: 1px solid rgba(255,255,255,0.35);
 }
 
-/* Mobil header */
+/* mobil header */
 @media (max-width: 480px) {
   .header-logo { width: 150px; }
   .header-divider { height: 36px; }
@@ -89,7 +90,6 @@ body {
 }
 
 /* container kısmı */
-
 .container {
   max-width: 1100px;
   margin: 0 auto;
@@ -97,7 +97,6 @@ body {
 }
 
 /* home / showcase */
-
 .home .showcase-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -149,7 +148,7 @@ body {
   transition: all 0.4s ease;
 }
 
-/* Hover (masaüstünde) */
+/* hover (masaüstünde aktif) */
 .home .showcase-card:hover img { transform: scale(1.08); }
 .home .showcase-card:hover h3 { transform: translateY(0); }
 .home .showcase-card:hover p {
@@ -157,7 +156,7 @@ body {
   transform: translateY(0);
 }
 
-/* Mobilde otomatik animasyon */
+/*  hover (mobilde otomatik animasyon) */
 @media (hover: none) and (pointer: coarse) {
   .home .showcase-card img { transform: scale(1.08); }
   .home .showcase-overlay h3 { transform: translateY(0); }
@@ -169,9 +168,7 @@ body {
 
 /* Masaüstü: 3lü grid */
 
-
-/* inner pagess */
-
+/* inner pages */
 .inner .header {
   padding: 22px 16px 18px;
   text-align: center;
@@ -198,7 +195,7 @@ body {
   opacity: .9;
 }
 
-/* menü ve ürünler gelllllllsin*/
+/* menü ve ürünler gelllllllsin */
 
 .inner .product-list {
   display: flex;
@@ -212,7 +209,6 @@ body {
   border-radius: 16px;
   box-shadow: 0 8px 22px rgba(0,0,0,0.10);
   overflow: hidden;
-
 }
 
 /* içecek kartı */
@@ -239,15 +235,14 @@ body {
   letter-spacing: .5px;
 }
 
-/* fiyat */
+/* FİYAT */
 .inner .price {
   font-size: 17px;
   font-weight: 900;
   color: #b32025;
 }
 
-/* ================= VARYASYONLU ÜRÜNLER ================= */
-
+/* VARYASYONLU ÜRÜNLER  */
 .inner .product-card.with-variants {
   padding: 14px;
 }
@@ -279,9 +274,7 @@ body {
   color: #666;
 }
 
-
 /* varyasyonlar chip / pill */
-
 .inner .variants {
   border-top: 1px solid #eee;
   padding-top: 8px;
@@ -311,7 +304,7 @@ body {
   white-space: nowrap;
 }
 
-/* fiyatt */
+/* fiyattsss */
 .inner .variant-row .price {
   font-weight: 900;
   color: #b32025;
@@ -327,7 +320,6 @@ body {
 }
 
 /* footer */
-
 .footer {
   background: #f3dcb4; /* sitedeki açık bej tonuna uyumlu */
   padding: 12px 16px;
@@ -343,10 +335,7 @@ body {
   align-items: center;
 }
 
-
-
 /* ===== SOSYAL MEDYA İKONLARI ===== */
-
 .contact .social {
   display: inline-flex;
   align-items: center;
@@ -354,12 +343,11 @@ body {
 }
 
 .contact .social img {
-  width: 40px;
-  height: 40px;
+  width: 35px;
+  height: 35px;
   border-radius: 100%;
   padding: 0px;
   background: whitesmoke;
-
 }
 
 @media (max-width: 380px) {
@@ -375,7 +363,6 @@ body {
 }
 
 @media (max-width: 360px) {
-
   .inner .variant-group {
     display: block;
   }
@@ -387,7 +374,7 @@ body {
     border-radius: 14px;
   }
 
-  /* Dondurmalı / Dondurmasız etiketi */
+  /* dondurmali dondurmasiz etiketi */
   .inner .variant-title {
     display: block;
     margin-bottom: 6px;
@@ -401,18 +388,16 @@ body {
 }
 
 @media (min-width: 361px) {
-
-  /* Kart içi boşluğu biraz daralt */
   .inner .product-card.with-variants {
     padding-right: 16px;
   }
 
-  /* Varyasyon alanı tam genişliği kullansın */
+  /* alan tam genişliği kullansın */
   .inner .variants {
     width: 100%;
   }
 
-  /* Dondurmalı satırı SOLA yasla */
+  /* dondurmalı satırı en sola yaslama (hafif kayıklık var UNUTMAa */
   .inner .variant-group {
     display: flex;
     align-items: center;
@@ -421,13 +406,12 @@ body {
     width: 100%;
   }
 
-  /* Etiket sabit ama sola yakın */
+  /* etiket sabit ama sola yakın */
   .inner .variant-title {
     min-width: 110px;
     text-align: left;
   }
 
-  /* Küçük / Büyük pill’leri eşit */
   .inner .variant-row {
     min-width: 140px;
     justify-content: space-between;
@@ -435,7 +419,6 @@ body {
 }
 
 @media (max-width: 475px) {
-
   .inner .variant-group {
     display: block;
   }
@@ -472,6 +455,26 @@ body {
 
 @media (max-width: 479px) {
   .inner .variant-group + .variant-group .variant-title {
-    margin-top: 4px; /* 1–2px istersen 3 yap */
+    margin-top: 4px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-logo {
+    width: 120px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-brand {
+    max-width: 100%;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-brand {
+    max-width: 100%;
+    gap: 10px;
   }
 }
