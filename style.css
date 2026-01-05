@@ -51,7 +51,8 @@ body {
   right: 0;
   bottom: 0;
   height: 15px;
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0), #f1cb89);
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0),
+  #f22d0aa0);
   z-index: 3;
   pointer-events: none;
 }
