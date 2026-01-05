@@ -105,7 +105,11 @@ body {
   color: #fff;
 }
 
-
+.header .logo,
+.header .back {
+  position: relative;
+  z-index: 5;
+}
 
 /* iletişim kutucuğu */
 .contact {
