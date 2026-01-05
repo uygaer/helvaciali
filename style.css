@@ -22,13 +22,25 @@ body {
   position: sticky;
   top: 0;
   z-index: 10;
+  overflow: hidden; /* şart */
+}
+
+.header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 200%;
+  height: 100%;
 
   background-image: url("images/banner-header/header-wood.jpeg");
   background-repeat: repeat-x;
   background-size: auto 100%;
-  background-position: 3000px center;
 
-  animation: headerFlow 100s linear infinite;
+  animation: headerMove 50s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
 
 /* header ve sayfa rengi arası yumuşaklık */
@@ -46,16 +58,10 @@ body {
 
 
 /* akan animasyon */
-@keyframes headerFlow {
-  from {
-    background-position: 0 0;
-  }
-
-  to {
-    background-position: 2000px 0;
-  }
+@keyframes headerMove {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
 }
-
 
 .header-inner {
   margin: 0 auto;
