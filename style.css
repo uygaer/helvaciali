@@ -170,12 +170,18 @@ body {
   font-size: 13px;
   letter-spacing: 0.3px;
   white-space: nowrap;
+  font-variant-numeric: tabular-nums lining-nums;
+  line-height: 1;
+  vertical-align: middle;
+  display: inline-flex;
+  align-items: center;
 }
 
 .phone strong {
   color: var(--gold-light);
   font-family: 'Merriweather', serif;
   font-weight: 700;
+  font-variant-numeric: tabular-nums lining-nums;
 }
 
 /* container */
