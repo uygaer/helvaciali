@@ -112,7 +112,9 @@ body {
 .contact {
   margin-top: 14px;
   display: inline-flex;
-  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 9px;
   align-items: center;
   font-size: 14px;
   background: rgba(201, 168, 76, 0.07);
@@ -162,7 +164,7 @@ body {
 }
 
 .phone {
-  padding-left: 7px;
+  padding-left: 10px;
   border-left: 1px solid rgba(201, 168, 76, 0.25);
   color: var(--gold-light);
   font-family: 'Libre Baskerville', serif;
